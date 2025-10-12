@@ -10,7 +10,6 @@ import {
 
 export default function WorksPage() {
   const [projects, setProjects] = useState<Project[]>([]);
-  const itemsPerRow = 8;
 
   const getProjects = async () => {
     const res = await fetch("http://localhost:3000/api/projects", {

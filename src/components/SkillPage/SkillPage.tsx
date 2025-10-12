@@ -6,7 +6,7 @@ import Image from "next/image";
 
 export default function SkillPage() {
   const [skills, setSkills] = useState<Skill[]>([]);
-  const [openSkillId, setOpenSkillId] = useState<number | null>(null);
+  const [setOpenSkillId] = useState<number | null>(null);
 
   const getSkills = async () => {
     const res = await fetch("/api/skills", {
@@ -43,13 +43,12 @@ export default function SkillPage() {
             }}
           >
             <div className="d-flex align-items-center justify-content-center flex-grow-1">
-              <img
+              <Image
                 src={skill.icon}
                 alt={skill.name}
-                className="img-fluid"
+                width={80}
+                height={80}
                 style={{
-                  maxWidth: "80px",
-                  maxHeight: "80px",
                   objectFit: "contain",
                 }}
               />
