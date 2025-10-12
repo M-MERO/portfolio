@@ -8,7 +8,7 @@ import {
   AccordionItem,
 } from "@radix-ui/react-accordion";
 
-export default function CareerPage() {
+export default function WorksPage() {
   const [projects, setProjects] = useState<Project[]>([]);
   const itemsPerRow = 8;
 
@@ -32,11 +32,11 @@ export default function CareerPage() {
     <div id="career" className="page">
       <h2>Works</h2>
       <div className="d-flex flex-wrap justify-content-center">
-        <Accordion type="single" collapsible className="w-75">
+        <Accordion type="single" collapsible className="w-50">
           {projects.map((project) => (
             <AccordionItem
               key={project.id}
-              className="border-dark border-2 shadow mb-2 rounded-4 p-2"
+              className=" border-2 mb-2 rounded-4 p-2"
               value={`item-${project.id}`}
             >
               <AccordionTrigger>{project.name}</AccordionTrigger>

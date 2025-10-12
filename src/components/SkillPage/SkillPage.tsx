@@ -36,7 +36,11 @@ export default function SkillPage() {
           <div
             key={skill.id}
             className="d-flex flex-column border-2 rounded-4  shadow"
-            style={{ width: "150px", height: "150px", aspectRatio: "1 / 1" }}
+            style={{
+              width: "150px",
+              height: "150px",
+              aspectRatio: "1 / 1",
+            }}
           >
             <div className="d-flex align-items-center justify-content-center flex-grow-1">
               <img
