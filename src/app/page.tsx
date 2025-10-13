@@ -3,7 +3,7 @@ import SkillPage from "@/components/SkillPage/SkillPage";
 import AboutMePage from "@/components/AboutMePage/AboutMePage";
 import TopPage from "@/components/TopPage/TopPage";
 import Footer from "@/components/Footer/Footer";
-import { use, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { OverlayLoading } from "react-loading-randomizable";
 import WorksPage from "@/components/WorksPage/WorksPage";
 

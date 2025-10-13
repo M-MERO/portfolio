@@ -6,7 +6,6 @@ import Image from "next/image";
 
 export default function SkillPage() {
   const [skills, setSkills] = useState<Skill[]>([]);
-  const [setOpenSkillId] = useState<number | null>(null);
 
   const getSkills = async () => {
     const res = await fetch("/api/skills", {

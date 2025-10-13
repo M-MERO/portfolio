@@ -1,6 +1,5 @@
-import { NextResponse } from "next/server";
-export const dinamic = "force-dynamic";
-export const revalidate = false;
+export const dynamic = "force-dynamic";
+
 export interface Skill {
   id: number;
   icon: string;
@@ -9,7 +8,7 @@ export interface Skill {
   remark: string;
 }
 
-export const GET = async () => {
+export async function GET() {
   const skills: Skill[] = [
     {
       id: 1,
@@ -106,10 +105,5 @@ export const GET = async () => {
   // 実務で使える程度: teraterm, linux, git, Docker
   // 何となくわかる程度: Bootstrap, HTML5, CSS
   // 触ったことある程度: .NET, PostgreSQL, Node.js, NEXT.js, Vue.js, Kubernetes, Apache HTTP Server
-  return NextResponse.json(
-    { skills },
-    {
-      status: 200,
-    }
-  );
-};
+  return Response.json({ skills });
+}

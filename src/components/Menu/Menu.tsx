@@ -1,5 +1,4 @@
 import "bootstrap/dist/css/bootstrap.min.css";
-import Link from "next/link";
 import React from "react";
 import {
   NavigationMenu,

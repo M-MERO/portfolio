@@ -15,12 +15,7 @@ export const metadata: Metadata = {
   icons: {
     icon: "/images/favicon.png",
   },
-  meta: {
-    keywords:
-      "Portfolio, Necochi, Backend Engineer, Java, SE, システムエンジニア",
-    description:
-      "バックエンドエンジニアNecochiのポートフォリオサイトです。これまで私が身につけたスキルや経験を紹介しています。",
-  },
+  description: "Mero's Portfolio Site",
 };
 
 export default function RootLayout({

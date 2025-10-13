@@ -1,6 +1,5 @@
-import { NextResponse } from "next/server";
-export const dinamic = "force-dynamic";
-export const revalidate = false;
+export const dynamic = "force-dynamic";
+
 export interface Project {
   id: number;
   name: string;
@@ -32,10 +31,5 @@ export async function GET() {
         "SSL対応に伴うフロント側の画面改修と中継機のHTTPサーバのSSL化対応を行いました。〜に努めました。",
     },
   ];
-  return NextResponse.json(
-    { projects },
-    {
-      status: 200,
-    }
-  );
+  return Response.json({ projects });
 }
