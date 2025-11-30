@@ -1,0 +1,1 @@
+self.__REACT_LOADABLE_MANIFEST='{"app/page.tsx -> @/components/OverlayLoading/OverlayLoading":{"id":6956,"files":["static/chunks/204.f8b0f12f1ef7a249.js","static/chunks/956.a6450525f3603bfd.js"]}}';
