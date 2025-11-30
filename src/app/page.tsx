@@ -4,8 +4,15 @@ import AboutMePage from "@/components/AboutMePage/AboutMePage";
 import TopPage from "@/components/TopPage/TopPage";
 import Footer from "@/components/Footer/Footer";
 import { useEffect, useState } from "react";
-import { OverlayLoading } from "react-loading-randomizable";
+import dynamic from "next/dynamic";
 import WorksPage from "@/components/WorksPage/WorksPage";
+
+const DynamicOverlayLoading = dynamic(
+  () => import("@/components/OverlayLoading/OverlayLoading"),
+  {
+    ssr: false,
+  }
+);
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
@@ -19,7 +26,7 @@ export default function Home() {
   }, []);
   return (
     <div>
-      <OverlayLoading active={isLoading} />
+      <DynamicOverlayLoading active={isLoading} />
       <TopPage />
       <AboutMePage />
       <WorksPage />
